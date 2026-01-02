@@ -1,9 +1,8 @@
-FROM ubuntu:latest
+FROM python:3
  
-RUN apt update && apt install -y \
-    python3 python3-pip git
+RUN apt update && apt install -y git
 
-RUN pip3 install PyYAML==6.0.1
+RUN pip install --no-cache-dir PyYAML
 
 COPY feed.py /usr/bin/feed.py 
 
