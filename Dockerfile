@@ -1,8 +1,8 @@
-FROM python:3-alpine
+FROM ubuntu:latest
  
-RUN apt update && apt install -y git
+RUN apt update && apt install -y git python3 python3-pip
 
-RUN pip install --no-cache-dir PyYAML
+RUN python3 -m pip3 install --no-cache-dir PyYAML
 
 COPY feed.py /usr/bin/feed.py 
 
