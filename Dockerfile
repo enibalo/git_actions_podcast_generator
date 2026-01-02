@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3-alpine
  
 RUN apt update && apt install -y git
 
